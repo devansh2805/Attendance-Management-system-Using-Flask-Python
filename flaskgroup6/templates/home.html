@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block styling %}
+*{margin:0px;
+padding:0px;}
+#container ul
+{
+list-style:none;
+}
+#container ul li{
+background-color:orange;
+width:250px;
+height:50px;
+line-height:50px;
+border:1px solid white;
+float:left;
+text-align:center;
+color:white;
+font-size:20px;
+position:relative;
+
+}
+#container ul li:hover{
+background-color:red;
+}
+#container ul ul{
+display:none;
+}
+#container ul li:hover > ul
+{display:block;
+}
+#container ul ul ul {
+margin-left:250px;
+top:0px;
+position:absolute;
+}
+
+
+{% endblock %}
+
+{% block content %}
+<h1 style="text-align: center; color:red;">KJSCE Attendance</h1>
+<br><br>
+<p style="color:blue; text-align:left; font-size:30px; "><b><u>Department:</u></b></p>
+<h3 style="color:green; text-align:right;">{{name}} {{surname}}</h3>
+<a href="" style="float:right;">Logout</a>
+<br>
+<br><br>
+
+<div id="container" style="text-align:center">
+<ul style="text-align:center">
+    <li style="text-align:center">My Courses
+        <ul>
+            <li style="text-align:center">Course 1
+            <ul>
+                <li style="text-align:center"><a href="/upload">Class A</a></li>
+            </ul></li>
+        </ul>
+    </li>
+</ul>
+</div>
+
+<br>
+<br>
+
+{% endblock %}

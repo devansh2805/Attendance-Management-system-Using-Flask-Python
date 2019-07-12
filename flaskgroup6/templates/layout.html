@@ -1,0 +1,28 @@
+<html>
+    <head>
+        {% if title %}
+        <title>
+            KJSCE attendance-{{ title }}
+        </title>
+        {% else %}
+        <title>
+            KJSCE attendance
+        </title>
+        {% endif %}
+        <style>
+            body{
+                background-color:whitesmoke;  
+                text-align: center; 
+            }
+            {% block styling %}{% endblock %}
+        
+        </style>
+        <meta name="viewport" content="width = device-width, initial-scale=1.0">
+        <link href= "static/bootstrap.min.css" rel = "stylesheet" media= "screen">
+
+    </head>
+    <body>
+        <p></p>
+        {% block content %} {% endblock %}
+    </body>
+</html>
