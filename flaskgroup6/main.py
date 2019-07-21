@@ -106,7 +106,7 @@ def report():
     count3=0
     count4=0
 
-    attendance = ["a","b","c","d","e"]
+    attendance = ["Above 75","50 to 75","25 to 50","below 25","Zero"]
 
     cur.execute("SELECT * FROM exceltable")
     row_data = cur.fetchall()
