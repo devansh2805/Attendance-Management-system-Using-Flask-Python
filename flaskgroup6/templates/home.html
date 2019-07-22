@@ -1,4 +1,44 @@
 {% extends "layout.html" %}
+{% block styling %}
+*{margin:0px;
+padding:0px;}
+.dropdown
+{
+position:relative;
+display:inline-block;}
+#container ul
+{
+list-style:none;
+}
+#container ul li{
+background-color:orange;
+width:250px;
+height:50px;
+line-height:50px;
+border:1px solid white;
+float:left;
+text-align:center;
+color:white;
+font-size:20px;
+position:relative;
+
+}
+#container ul li:hover{
+background-color:red;
+}
+#container ul ul{
+display:none;
+}
+#container ul li:hover > ul
+{display:block;
+}
+#container ul ul ul {
+top:50px;
+position:absolute;
+}
+
+
+{% endblock %}
 
 {% block content %}
 <h1 style="text-align: center; color:red;">KJSCE Attendance</h1>
@@ -9,19 +49,17 @@
 <br>
 <br><br>
 
-<div align="center" id="container" style="text-align:center">
-<ul style="text-align:center; align-self:center;">
-    <li style="text-align:center">
-        My Courses
+<div id="container" class="dropdown" style="float:center;">
+<ul>
+    <li>My Courses
         <ul>
-            <li style="text-align:center">
-                Course 1
-                <ul>
-                    <li style="text-align:center"><a href="/upload">Class A</a></li>
-                </ul>
-            </li>
+            <li>Course 1
+            <ul>
+                <li><a href="/upload">Class A</a></li>
+            </ul></li>
         </ul>
     </li>
+
 </ul>
 </div>
 
