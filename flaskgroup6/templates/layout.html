@@ -9,14 +9,15 @@
             KJSCE attendance
         </title>
         {% endif %}
+
+        
         <style>
+            {% block styling %}{% endblock %}
             body
             {
                 background-color:whitesmoke;  
                 text-align: center; 
             }
-            {% block styling %} {% endblock %}
-        
         </style>
         <meta name="viewport" content="width = device-width, initial-scale=1.0">
         <link href= "static/bootstrap.min.css" rel = "stylesheet" media= "screen">
